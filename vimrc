@@ -1,5 +1,7 @@
+" Sample .vimrc file by Martin Brochhaus
 " Presented at PyCon APAC 2012
-" sstein 2020
+
+" mod sstein 2020
 
 
 " Automatic reloading of .vimrc
