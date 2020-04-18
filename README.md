@@ -13,7 +13,6 @@ No need to create symlinks or whatever.
 
 This is how I would push my config on a new machine where Git has already been installed:
 ```bash
-$ cd
-$ git clone git@github.com:therealstein/vim-config.git .vim
+git clone --recurse-submodules git@github.com:therealstein/vim-config.git .vim
 ```
 
