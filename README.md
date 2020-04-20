@@ -1,5 +1,5 @@
 
-#VIM -config
+# VIM -config
 
 ```
 ~/
