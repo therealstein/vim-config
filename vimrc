@@ -3,6 +3,11 @@
 
 " mod sstein 2020
 
+" find files in working dir
+set path+=**
+set wildmenu
+
+
 
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
@@ -33,6 +38,7 @@ let mapleader = ","
 noremap <C-n> :nohl<CR>
 vnoremap <C-n> :nohl<CR>
 inoremap <C-n> :nohl<CR>
+
 
 
 " Quicksave command
@@ -134,8 +140,8 @@ set noswapfile
 " mkdir -p ~/.vim/autoload ~/.vim/bundle
 " curl -so ~/.vim/autoload/pathogen.vim https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 " Now you can install any plugin into a .vim/bundle/plugin-name/ folder
-call pathogen#infect()
-
+execute pathogen#infect()
+execute pathogen#helptags()
 
 " ============================================================================
 " Python IDE Setup
@@ -199,6 +205,10 @@ let g:php_syntax_extensions_enabled = ["bcmath", "bz2", "core", "curl", "date", 
 
 
 " Tagbar
+autocmd FileType c,cpp,py,php,html nested :TagbarOpen
 nmap <F8> :TagbarToggle<CR>
 
+" jedi-vim
+"You can make jedi-vim use tabs when going to a definition etc:
+let g:jedi#use_tabs_not_buffers = 1
 
