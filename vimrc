@@ -6,8 +6,11 @@
 " find files in working dir
 set path+=**
 set wildmenu
-
-
+" dont use arrow keys
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
 
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
@@ -143,6 +146,8 @@ set noswapfile
 execute pathogen#infect()
 execute pathogen#helptags()
 
+
+
 " ============================================================================
 " Python IDE Setup
 " ============================================================================
@@ -205,7 +210,7 @@ let g:php_syntax_extensions_enabled = ["bcmath", "bz2", "core", "curl", "date", 
 
 
 " Tagbar
-autocmd FileType c,cpp,py,php,html nested :TagbarOpen
+autocmd VimEnter * nested :call tagbar#autoopen(1)
 nmap <F8> :TagbarToggle<CR>
 
 " jedi-vim
