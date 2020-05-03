@@ -7,15 +7,15 @@
 set path+=**
 set wildmenu
 " dont use arrow keys
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
+"noremap <Up> <Nop>
+"noremap <Down> <Nop>
+"noremap <Left> <Nop>
+"noremap <Right> <Nop>
 
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
 
-
+nmap <C-m> :execute ':!~/.MinGW_compile.py %:r'<CR> 
 " Better copy & paste
 " When you want to paste large blocks of code into vim, press F2 before you
 " paste. At the bottom you should see ``-- INSERT (paste) --``.
@@ -216,4 +216,4 @@ nmap <F8> :TagbarToggle<CR>
 " jedi-vim
 "You can make jedi-vim use tabs when going to a definition etc:
 let g:jedi#use_tabs_not_buffers = 1
-
+let g:SuperTabDefaultCompletionType = "context"
