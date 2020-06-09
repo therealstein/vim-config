@@ -15,7 +15,7 @@ set wildmenu
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
 
-nmap <C-m> :execute ':!~/.MinGW_compile.py %:r'<CR> 
+noremap <C-m> :execute ':!~/.MinGW_compile.py %:r'<CR>
 " Better copy & paste
 " When you want to paste large blocks of code into vim, press F2 before you
 " paste. At the bottom you should see ``-- INSERT (paste) --``.
@@ -175,7 +175,6 @@ set laststatus=2
 let g:jedi#usages_command = "<leader>z"
 let g:jedi#popup_on_dot = 0
 let g:jedi#popup_select_first = 0
-map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
 
 " Better navigating through omnicomplete option list
 " See http://stackoverflow.com/questions/2170023/how-to-map-keys-for-popup-menu-in-vim
